@@ -1,20 +1,23 @@
+import BlueberryTyping from "@/components/BlueberryTyping";
+
 export default function Home() {
   return (
     <div className="space-y-16">
       {/* Hero */}
-      <section className="space-y-6 pt-8">
-        <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
-          <span className="text-white text-glow">Jerry</span>
-          <br />
-          <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-300 bg-clip-text text-transparent">
-            Wang
-          </span>
-        </h1>
-        <p className="max-w-2xl text-lg leading-relaxed text-slate-400">
-          Recent Cybersecurity graduate with a passion for hardening
-          people&apos;s digital security. Part time drone enthusiast.
-        </p>
-        <div className="flex gap-3 pt-2">
+      <section className="flex items-center justify-between gap-8 pt-8">
+        <div className="space-y-6 flex-1">
+          <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight">
+            <span className="text-white text-glow">Jerry</span>
+            <br />
+            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-300 bg-clip-text text-transparent">
+              Wang
+            </span>
+          </h1>
+          <p className="max-w-2xl text-lg leading-relaxed text-slate-400">
+            Recent Cybersecurity graduate with a passion for hardening
+            people&apos;s digital security. Part time drone enthusiast.
+          </p>
+          <div className="flex gap-3 pt-2">
           <a
             href="/resume.pdf"
             download
@@ -28,6 +31,12 @@ export default function Home() {
           >
             Get in Touch
           </a>
+        </div>
+        </div>
+
+        {/* Blueberry mascot */}
+        <div className="hidden sm:block flex-shrink-0">
+          <BlueberryTyping />
         </div>
       </section>
 
