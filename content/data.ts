@@ -34,6 +34,7 @@ export interface CertificationEntry {
   expires?: string;
   credentialId?: string;
   verifyLink?: string;
+  logo?: string;
 }
 
 // ── Certifications ─────────────────────────────────
@@ -41,6 +42,7 @@ export const certifications: CertificationEntry[] = [
   {
     title: "Microsoft Certified: Azure Fundamentals",
     issuer: "Microsoft",
+    logo: "/logos/microsoft.svg",
     issued: "Apr 2026",
     credentialId: "2D31591325A22E8C",
     verifyLink:
@@ -49,6 +51,7 @@ export const certifications: CertificationEntry[] = [
   {
     title: "Fortinet Certified Associate in Cybersecurity",
     issuer: "Fortinet",
+    logo: "/logos/fortinet.svg",
     issued: "Mar 2026",
     expires: "Mar 2028",
     credentialId: "049835822JW",
@@ -58,6 +61,7 @@ export const certifications: CertificationEntry[] = [
   {
     title: "Certified in Cybersecurity (CC)",
     issuer: "ISC2",
+    logo: "/logos/isc2.svg",
     issued: "Mar 2026",
     expires: "Mar 2029",
     credentialId: "3731440",
