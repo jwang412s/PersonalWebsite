@@ -58,21 +58,21 @@ export default function Home() {
         <p className="text-slate-500">
           Feel free to reach out at{" "}
           <a
-            href="mailto:you@example.com"
+            href="mailto:jyw33@sfu.ca"
             className="text-indigo-500 hover:text-indigo-700 transition-colors"
           >
-            you@example.com
+            jyw33@sfu.ca
           </a>{" "}
           or find me on{" "}
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/jwang412s"
             className="text-indigo-500 hover:text-indigo-700 transition-colors"
           >
             GitHub
           </a>{" "}
           and{" "}
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/jerry--wang"
             className="text-indigo-500 hover:text-indigo-700 transition-colors"
           >
             LinkedIn
