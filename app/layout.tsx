@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name — Personal Website",
+  title: "Jerry Wang — Personal Website",
   description: "Personal website, blog, and portfolio.",
 };
 
@@ -34,7 +34,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="border-t border-slate-200 py-6 text-center text-sm text-slate-400">
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          &copy; {new Date().getFullYear()} Jerry Wang. All rights reserved.
         </footer>
       </body>
     </html>
