@@ -29,9 +29,11 @@ export default function ProjectsPage() {
             <h2 className="text-lg font-bold text-white">
               {project.title}
             </h2>
-            <p className="flex-1 text-sm text-slate-400 leading-relaxed">
-              {project.description}
-            </p>
+            <ul className="flex-1 list-disc list-outside ml-4 space-y-2 text-sm text-slate-400 leading-relaxed">
+              {project.description.map((bullet, j) => (
+                <li key={j}>{bullet}</li>
+              ))}
+            </ul>
 
             <div className="flex flex-wrap gap-2">
               {project.tags.map((t) => (

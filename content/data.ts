@@ -21,7 +21,7 @@ export interface ResearchEntry {
 
 export interface ProjectEntry {
   title: string;
-  description: string;
+  description: string[];
   tags: string[];
   link?: string;
   github?: string;
@@ -176,21 +176,27 @@ export const research: ResearchEntry[] = [
 // ── Projects ────────────────────────────────────────
 export const projects: ProjectEntry[] = [
   {
+    title: "Threat Attribution via Intelligent Knowledge Graphs: GNN-LP Based APT Attribution with Hierarchical Classification and Agentic Reasoning",
+    description: [
+      "Built an end-to-end threat intelligence pipeline that ingests IOCs from AlienVault OTX, enriches them with passive DNS and live DNS data, and constructs a heterogeneous knowledge graph in Neo4j (37K+ domains, 7K+ IPs, 12K+ URLs, 1.7K events across 10 APT groups)",
+      "Designed a 4-layer heterogeneous GraphSAGE model with per-node-type autoencoders (Domain/IP/URL → 64-dim), Dempster-Shafer Theory confidence scoring, SMOTE oversampling, and label propagation ensemble to attribute IOCs to APT groups with Palo Alto Unit 42-style tiered output (Named Actor / Nation State / Activity Cluster)",
+      "Conducted temporal ablation studies demonstrating that temporal node features (lifespan, recency) improve attribution accuracy by 9.4 percentage points, while freshness-decay loss weighting across τ ∈ {180, 365, 730, 1095} days showed no benefit, indicating stable APT tradecraft fingerprints over a 3-year observation window",
+      "Deployed as a FastAPI service with IOC enrichment, training, and real-time attribution endpoints; trained and compared models across 3 yearly dataset snapshots with automated experiment namespacing and HTML comparison reporting",
+    ],
+    tags: ["Python", "PyTorch", "PyTorch Geometric", "Neo4j", "FastAPI", "scikit-learn", "AlienVault OTX API", "Passive DNS"],
+    github: "https://github.com/jwang412s/DNS_CTI_capstone.git",
+  },
+  {
     title: "Nurse Practitioner VR Tool",
-    description:
-      `Responsible for animating and role-engineering virtual metahumans to roleplay as patients in OSCE assessments. Achieved real time speech-to-speech using OpenAI API endpoints with utilization of the Runtime Speech
-      Recognizer Library. Created animation state machines for life-like human interactions with the project’s metahumans, and implemented user interactions for VR. 
-      To mimic the behavior of patients in real OSCE assessments, I included guardrails in the system’s role prompt to 
-      ensure that no extraneous information was volunteered by the LLM.`,
+    description: [
+      "Animated and role-engineered virtual metahumans to roleplay as patients in OSCE assessments",
+      "Achieved real-time speech-to-speech using OpenAI API endpoints with utilization of the Runtime Speech Recognizer Library",
+      "Created animation state machines for life-like human interactions with the project’s metahumans, and implemented user interactions for VR",
+      "Included guardrails in the system’s role prompt to mimic the behavior of patients in real OSCE assessments, ensuring no extraneous information was volunteered by the LLM",
+    ],
     tags: ["Unreal Engine 5", "Quest 3", "Openai API", "C++", "Blueprints", "Metahuman Creator"],
     link: "https://youtu.be/SVfRaU9fRZ8",
     //github: "https://youtu.be/SVfRaU9fRZ8",
-  },
-  {
-    title: "Another Project",
-    description: "Description of another cool thing you built.",
-    tags: ["Python", "Machine Learning"],
-    github: "https://github.com/yourusername/another-project",
   },
   // Add more entries by copying the block above
 ];
