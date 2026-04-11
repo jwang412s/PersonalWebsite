@@ -3,6 +3,29 @@
 // Just modify the arrays below — the site picks them up automatically.
 // =====================================================
 
+export interface EducationEntry {
+  school: string;
+  degree: string;
+  period: string;
+  awards?: string[];
+}
+
+// ── Education ──────────────────────────────────────
+export const education: EducationEntry[] = [
+  {
+    school: "Simon Fraser University",
+    degree: "Master of Cybersecurity",
+    period: "Sept 2024 – Present",
+  },
+  {
+    school: "University of British Columbia",
+    degree: "BSc - Cognitive Systems",
+    period: "Sept 2019 – May 2024",
+    awards: ["Kirk Karasin Memorial Award in Computer Science"],
+  },
+  // Add more entries by copying the block above
+];
+
 export interface WorkEntry {
   company: string;
   role: string;
