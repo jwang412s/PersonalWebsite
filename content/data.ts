@@ -221,5 +221,15 @@ export const projects: ProjectEntry[] = [
     link: "https://youtu.be/SVfRaU9fRZ8",
     //github: "https://youtu.be/SVfRaU9fRZ8",
   },
+  {
+    title: "Buddy Trivia",
+    description: [
+      "Built a real-time multiplayer trivia game for couples and friends to play together over a local network, with one host running the game on a laptop while players join from their phones",
+      "Implemented real-time communication using Socket.io for seamless game state synchronization between host and player devices",
+      "Players pair up, draw custom avatars, and answer trivia questions in rounds — the first pair to reach the target score wins",
+    ],
+    tags: ["React", "Node.js", "Express", "Socket.io", "SQLite", "Tailwind CSS", "Vite"],
+    github: "https://github.com/jwang412s/Buddy-Trivia",
+  },
   // Add more entries by copying the block above
 ];
