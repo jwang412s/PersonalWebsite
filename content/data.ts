@@ -164,6 +164,17 @@ export const workHistory: WorkEntry[] = [
       ` Conducted inventory and equipment audits for workstation upgrades and new hardware deployments, ensuring all systems met department standards.`
     ],
   },
+  {
+    company: "UBC Psychology – BAR Lab",
+    role: "Research Assistant",
+    period: "June 2022 – October 2023",
+    description: "Research Assistant supporting VR-based psychology studies and participant coordination.",
+    highlights: [
+      "Coordinated research project timelines and participant scheduling through UBC's Human Subject Pool system, ensuring 100% compliance with study protocols.",
+      "Designed and developed experimental paradigms for VR studies using Unity and C#.",
+      "Recorded data in Excel and utilized jamovi for data analysis; drafted methodologies in Word.",
+    ],
+  },
   // Add more entries by copying the block above
 ];
 
