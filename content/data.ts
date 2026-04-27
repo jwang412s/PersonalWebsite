@@ -210,15 +210,15 @@ export const research: ResearchEntry[] = [
 // ── Projects ────────────────────────────────────────
 export const projects: ProjectEntry[] = [
   {
-    title: "Threat Attribution via Intelligent Knowledge Graphs: GNN-LP Based APT Attribution with Hierarchical Classification and Agentic Reasoning",
+    title: "Knowledge Graph Based Attribution of Advanced Persistent Threats",
     description: [
-      "Built an end-to-end threat intelligence pipeline that ingests IOCs from AlienVault OTX, enriches them with passive DNS and live DNS data, and constructs a heterogeneous knowledge graph in Neo4j (37K+ domains, 7K+ IPs, 12K+ URLs, 1.7K events across 10 APT groups)",
-      "Designed a 4-layer heterogeneous GraphSAGE model with per-node-type autoencoders (Domain/IP/URL → 64-dim), Dempster-Shafer Theory confidence scoring, SMOTE oversampling, and label propagation ensemble to attribute IOCs to APT groups with Palo Alto Unit 42-style tiered output (Named Actor / Nation State / Activity Cluster)",
-      "Conducted temporal ablation studies demonstrating that temporal node features (lifespan, recency) improve attribution accuracy by 9.4 percentage points, while freshness-decay loss weighting across τ ∈ {180, 365, 730, 1095} days showed no benefit, indicating stable APT tradecraft fingerprints over a 3-year observation window",
-      "Deployed as a FastAPI service with IOC enrichment, training, and real-time attribution endpoints; trained and compared models across 3 yearly dataset snapshots with automated experiment namespacing and HTML comparison reporting",
+      "Built an end-to-end threat intelligence pipeline ingesting IOCs from AlienVault OTX to construct a heterogeneous knowledge graph in Neo4j (2.1M+ nodes, 7.9M+ edges spanning domains, IPs, URLs, and events across 10 APT groups), enriched with passive and live DNS data",
+      "Designed a 4-layer heterogeneous GraphSAGE model with per-node-type autoencoders and a Dempster-Shafer Theory confidence tier hierarchy: Tier-3 named actor (e.g. 'Kimsuky', 83.69% accuracy), Tier-2 nation-state (e.g. 'Russia', 91.05%), and Tier-1 activity cluster (e.g. 'State-Sponsored') — recommending the most specific tier whose confidence clears its threshold",
+      "Investigated temporal recency via a year-drop experiment on 1,740 fresh OTX events (April 2023–April 2026): models trained only on historical data dropped from ~83% to ~17% named-actor accuracy on out-of-distribution recent IOCs; retraining directly on 2023–2026 data recovered 73.2% named-actor and 80.1% nation-state accuracy, demonstrating APT tradecraft evolution over time",
+      "Deployed as a FastAPI service with IOC enrichment, training, and real-time attribution endpoints; automated experiment namespacing and HTML comparison reporting across yearly dataset snapshots",
     ],
     tags: ["Python", "PyTorch", "PyTorch Geometric", "Neo4j", "FastAPI", "scikit-learn", "AlienVault OTX API", "Passive DNS"],
-    github: "https://github.com/jwang412s/DNS_CTI_capstone.git",
+    github: "https://github.com/jwang412s/GNN_APT",
   },
   {
     title: "Nurse Practitioner VR Tool",
